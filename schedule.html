@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Schedule | Tech Event 2026</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --bg: #f8fafc;
+            --text: #0f172a;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: color 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a[href="schedule.html"] {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--text);
+            letter-spacing: -0.025em;
+        }
+
+        /* Schedule List */
+        ul {
+            list-style: none;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        li {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease;
+            border-left: 4px solid var(--primary);
+        }
+
+        li:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Track Icons */
+        li::before {
+            content: "";
+            width: 48px;
+            height: 48px;
+            background-color: #eff6ff;
+            border-radius: 50%;
+            margin-right: 1.25rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232563eb'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z'/%3E%3C/svg%3E");
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-shrink: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        footer p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 2rem; }
+            nav { padding: 1rem; gap: 0.75rem; }
+            nav a { font-size: 0.85rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="speakers.html">Speakers</a>
+        <a href="register.html">Register</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <main>
+        <h1>Event Schedule</h1>
+
+        <ul>
+            <li>Web Development Track</li>
+            <li>AI / ML Track</li>
+            <li>Cyber Security Track</li>
+            <li>Cloud Computing Track</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>© 2026 Tech Event. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
